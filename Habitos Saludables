@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hábitos Saludables en RA</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <!-- Activador de RA usando un marcador -->
+      <a-marker type="pattern" url="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/three.js/examples/marker-training/examples/pattern-files/pattern-kanji.patt">
+        
+        <!-- Mensaje de texto en RA -->
+        <a-text value="¡Come frutas y verduras todos los días!" position="0 0.5 -1" scale="1.5 1.5 1.5" color="#FF5722"></a-text>
+        
+        <!-- Modelo 3D de una manzana -->
+        <a-entity 
+          gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models/2.0/Apple/glTF/Apple.gltf" 
+          position="0 0 -1" 
+          scale="0.5 0.5 0.5">
+        </a-entity>
+
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
